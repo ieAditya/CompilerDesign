@@ -45,7 +45,7 @@ void findDigit(int n){
 }
 
 int main(){
-    int n = 5666;
+    int n = 566;
     // cin>>n;
     if(n/1000 == 0)
     findDigit(n);
