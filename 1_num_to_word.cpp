@@ -45,10 +45,15 @@ void findDigit(int n){
 }
 
 int main(){
-    int n = 566;
+    int n = -0;
     // cin>>n;
-    if(n/1000 == 0)
-    findDigit(n);
+    if(n==0)
+        cout<<"Zero";
+    else if(n/1000 == 0){
+        if(n<0)
+            cout<<"Minus ";
+        findDigit(abs(n));
+    }
     else
     cout<<"Invalid Number!! Enter 3 digit number";
     return 0;
