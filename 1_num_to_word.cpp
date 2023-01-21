@@ -38,14 +38,14 @@ void print(int digit){
 }
 
 void findDigit(int n){
-    if(n!=0){
+    if(n){
         findDigit(n/10);
         print(n%10);
     }
 }
 
 int main(){
-    int n = -0;
+    int n = -356;
     // cin>>n;
     if(n==0)
         cout<<"Zero";
