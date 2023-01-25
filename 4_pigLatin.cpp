@@ -48,11 +48,11 @@ string pigLatin(string word)
 
 int main()
 {
-    string word1 = "queue";
+    string word = "queue";
     string word2 = "paris";
     string word3 = "amazon";
     string word4 = "graphic";
-    string ans = pigLatin(word1);
+    string ans = pigLatin(word);
     cout << ans << endl;
     ans = pigLatin(word2);
     cout << ans << endl;
