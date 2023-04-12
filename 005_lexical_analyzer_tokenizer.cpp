@@ -78,7 +78,7 @@ void identify(string input)
                     break;
                 }
             }
-            cout << tempstr << "|" << endl;
+            cout << tempstr << endl;
             checkAndStore(tempstr);
         }
         i++;
