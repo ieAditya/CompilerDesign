@@ -42,15 +42,6 @@ vector<string> removeLR(string input)
             i = j + 1;
         }
     }
-    // for (auto i : recProds)
-    // {
-    //     cout << i << endl;
-    // }
-    // // cout << endl;
-    // for (auto i : nonRecProds)
-    // {
-    //     cout << i << endl;
-    // }
 
     vector<string> ans;
     ans.push_back("S->");
@@ -61,7 +52,7 @@ vector<string> removeLR(string input)
     ans.push_back("Z->");
     for (auto i : nonRecProds)
     {
-        ans[1] = ans[1] + i + 'Z';
+        ans[1] = ans[1] + i + 'Z' + "|";
     }
     ans[1] += "|epsilon";
     return ans;
@@ -69,7 +60,7 @@ vector<string> removeLR(string input)
 
 int main()
 {
-    string input = "S->Sa|bc|Sbd";
+    string input = "S->a|zc|Sbd";
     vector<string> ans = removeLR(input);
 
     for (auto i : ans)
