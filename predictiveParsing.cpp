@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-// #include <string.h>
 #define max 20
 
 using namespace std;
@@ -232,5 +231,4 @@ int main()
         cout << endl;
     }
     return 0;
-    ;
 }
