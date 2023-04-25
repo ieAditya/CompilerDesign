@@ -44,23 +44,32 @@ vector<string> removeLR(string input)
     }
 
     vector<string> ans;
-    ans.push_back("S->");
-    for (auto i : recProds)
+    if (!recProds.empty())
     {
-        ans[0] = ans[0] + i + 'Z' + '|';
+        ans.push_back("S->");
+        for (auto i : nonRecProds)
+        {
+            ans[0] = ans[0] + i + 'Z' + '|';
+        }
+        ans.push_back("Z->");
+        for (auto i : recProds)
+        {
+            ans[1] = ans[1] + i + 'Z' + "|";
+        }
+        ans[1] += (char)238;
     }
-    ans.push_back("Z->");
-    for (auto i : nonRecProds)
+    else
     {
-        ans[1] = ans[1] + i + 'Z' + "|";
+        cout << "No left recursion found." << endl;
+        ans.push_back(input);
     }
-    ans[1] += "|epsilon";
     return ans;
 }
 
 int main()
 {
-    string input = "S->a|zc|Sbd";
+    string input = "S->S*T|T|a|S+t";
+    // string input = "S->T|a";
     vector<string> ans = removeLR(input);
 
     for (auto i : ans)
